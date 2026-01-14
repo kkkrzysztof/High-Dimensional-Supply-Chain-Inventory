@@ -2,6 +2,16 @@
 
 This is a BI/Analytics project done based on the Kaggle dataset entitled "[High-Dimensional Supply Chain Inventory Dataset](https://www.kaggle.com/datasets/ziya07/high-dimensional-supply-chain-inventory-dataset/data)."
 
+## Project Legend:
+
+:white_check_mark: Done
+:x: Not done
+:construction: In progress
+
+## Project Tasks:
+- :white_check_mark: Data Loading
+- :white_check_mark: Datatypes
+
 # About the Dataset
 
 Based on the information from the [original dataset source repository](https://www.kaggle.com/datasets/ziya07/high-dimensional-supply-chain-inventory-dataset/data), here is the (mostly sourced) interpretation of the columns in the dataset:
