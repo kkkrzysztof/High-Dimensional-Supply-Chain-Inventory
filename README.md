@@ -1,4 +1,4 @@
-# About the Project
+# About the Project:
 
 This is a BI/Analytics project done based on the Kaggle dataset entitled "[High-Dimensional Supply Chain Inventory Dataset](https://www.kaggle.com/datasets/ziya07/high-dimensional-supply-chain-inventory-dataset/data)."
 
@@ -13,12 +13,15 @@ This is a BI/Analytics project done based on the Kaggle dataset entitled "[High-
 - :white_check_mark: Set PBIX file's regional settings to US (to ensure proper decimal and date format so that it's not necessary to replace values e.g. decimal/thousand separator)
 - :white_check_mark: Data Loading (loading from CSV with proper row delimiter; cleaning text, trimming text just in case; setting the first row as header)
 - :white_check_mark: Data Profiling (confirmed number of columns (15), confirmed consistent column-naming format ("Column_name"), setting datatypes, confirmed no nulls, confirmed no row duplicates (group by [Date]&[SKU_ID]&[Warehouse_ID]&[Supplier_ID]), confirmed no categorical duplicates (consistent naming: distinct value=distinct category))
-- :white_check_mark: Creating a date table
-- :x: Creating missing dates
-- :x: Check if there is data for each day and for each combination of categorical variables (SKU_ID, Warehouse_ID, Supplier_ID, Region)
-- :x: Exploratory Data Analysis
+- :white_check_mark: Creating a "dates" table
+- :white_check_mark: Checked combinations of categorical variables (SKU_ID, Warehouse_ID, Supplier_ID, Region)
+- :white_check_mark: Run summary statistics in PQ/M (discovered a column with zero variance, "Stockout_Events" - all values are 0)
+:construction: Calculating basic measures
+- :white_check_mark: Done basic analysis of KPIs per various categories
+:x: Make the dashboard pretty
+:x: Make the dashboard interactive/user-friendly (with tooltips, buttons, bookmarks, etc.)
 
-# About the Dataset
+# About the Dataset:
 
 Based on the information from the [original dataset source repository](https://www.kaggle.com/datasets/ziya07/high-dimensional-supply-chain-inventory-dataset/data), here is the (mostly sourced) interpretation of the columns in the dataset:
 
