@@ -10,16 +10,22 @@ This is a BI/Analytics project done based on the Kaggle dataset entitled "[High-
 
 ## Project Tasks:
 
-- :white_check_mark: Set PBIX file's regional settings to US (to ensure proper decimal and date format so that it's not necessary to replace values e.g. decimal/thousand separator)
-- :white_check_mark: Data Loading (loading from CSV with proper row delimiter; cleaning text, trimming text just in case; setting the first row as header)
+- :white_check_mark: Ensuring that localization is in English (File>Options and settings>Options>CURRENT FILE>Regional Settings>Locale for import>"English (United States)"; File>Options and settings>Options>GLOBAL>Regional Settings>Application language, Model language>"English (United States)"; System Settings>Time & language>Language & region>Region>Regional format>"English (United States)"); ensuring consistent decimal and datetime format so that it's not necessary to replace values e.g. decimal/thousand separators; used EN_US localization since the project is dedicated to English-speaking audiences
+- :white_check_mark: Creating a "FolderPath" parameter to store the string of the path of the folder where the *.pbix file happens to be situated (good practice)
+- :white_check_mark: Data Loading (loading from CSV with proper row delimiter; cleaning text, trimming text just in case; setting the first row as header); there is a separate query "load_data" for just fetching data, and another one calle "supply_chain_dataset" for changing datatypes
 - :white_check_mark: Data Profiling (confirmed number of columns (15), confirmed consistent column-naming format ("Column_name"), setting datatypes, confirmed no nulls, confirmed no row duplicates (group by [Date]&[SKU_ID]&[Warehouse_ID]&[Supplier_ID]), confirmed no categorical duplicates (consistent naming: distinct value=distinct category))
 - :white_check_mark: Creating a "dates" table
 - :white_check_mark: Checked combinations of categorical variables (SKU_ID, Warehouse_ID, Supplier_ID, Region)
 - :white_check_mark: Run summary statistics in PQ/M (discovered a column with zero variance, "Stockout_Events" - all values are 0)
 :construction: Calculating basic measures
-- :white_check_mark: Done basic analysis of KPIs per various categories
-:x: Make the dashboard pretty
-:x: Make the dashboard interactive/user-friendly (with tooltips, buttons, bookmarks, etc.)
+- :white_check_mark: Using a DAX "_Measures" table ("_Measures = SELECTCOLUMNS( {} , "_", BLANK() )") for storing Measures (good practice)
+- :white_check_mark: Done basic analysis of KPIs per various categories, measures
+- :white_check_mark: Selecting a specific date format in Power BI Table View ("14 March, 2001 (d mmmm, yyyy)")
+- :white_check_mark: Setting explicit formatting for measures
+- :construction: Thinking up new new ways of analyzing the data
+- :construction: Make the dashboard pretty (good taste? may need tutorial for that)
+- :construction: Make the dashboard interactive/user-friendly/navigable (with tooltips, buttons, bookmarks, etc.)
+- :x: Designing
 
 # About the Dataset:
 
