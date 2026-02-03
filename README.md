@@ -14,18 +14,23 @@ This is a BI/Analytics project done based on the Kaggle dataset entitled "[High-
 - :white_check_mark: Creating a "FolderPath" parameter to store the string of the path of the folder where the *.pbix file happens to be situated (good practice)
 - :white_check_mark: Data Loading (loading from CSV with proper row delimiter; cleaning text, trimming text just in case; setting the first row as header); there is a separate query "load_data" for just fetching data, and another one calle "supply_chain_dataset" for changing datatypes
 - :white_check_mark: Data Profiling (confirmed number of columns (15), confirmed consistent column-naming format ("Column_name"), setting datatypes, confirmed no nulls, confirmed no row duplicates (group by [Date]&[SKU_ID]&[Warehouse_ID]&[Supplier_ID]), confirmed no categorical duplicates (consistent naming: distinct value=distinct category))
+- :white_check_mark: Fixed IDs for "correct alphabetic order" e.g SKU_1 -> SKU_01; this comes up in the visuals
 - :white_check_mark: Creating a "dates" table
 - :white_check_mark: Checked combinations of categorical variables (SKU_ID, Warehouse_ID, Supplier_ID, Region)
 - :white_check_mark: Run summary statistics in PQ/M (discovered a column with zero variance, "Stockout_Events" - all values are 0)
-:construction: Calculating basic measures
+- :white_check_mark: Calculating basic measures
 - :white_check_mark: Using a DAX "_Measures" table ("_Measures = SELECTCOLUMNS( {} , "_", BLANK() )") for storing Measures (good practice)
 - :white_check_mark: Done basic analysis of KPIs per various categories, measures
-- :white_check_mark: Selecting a specific date format in Power BI Table View ("14 March, 2001 (d mmmm, yyyy)")
+- :white_check_mark: Selecting a specific date format in Power BI Table View ("14 March 2001 (d mmmm yyyy)")
+- :white_check_mark: Decided on "20" as the default margin size
 - :white_check_mark: Setting explicit formatting for measures
-- :construction: Thinking up new new ways of analyzing the data
+- :white_check_mark: "Sales" report page finished
+- :construction: Thinking up new ways of analyzing the data (measures, columns)
 - :construction: Make the dashboard pretty (good taste? may need tutorial for that)
+- :construction: Add shadows to visuals
 - :construction: Make the dashboard interactive/user-friendly/navigable (with tooltips, buttons, bookmarks, etc.)
-- :x: Designing
+- :x: Creating a custom theme for my dashboards and reports
+- :x: Designing a mobile view (might require Power BI Pro?)
 
 # About the Dataset:
 
