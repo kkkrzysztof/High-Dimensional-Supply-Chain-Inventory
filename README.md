@@ -25,6 +25,8 @@ This is a BI/Analytics project done based on the Kaggle dataset entitled "[High-
 - :white_check_mark: Decided on "20" as the default margin size
 - :white_check_mark: Setting explicit formatting for measures
 - :white_check_mark: "Sales" report page finished
+- :construction: Creating my own theme
+- :construction: Study the column meaning more deeply
 - :construction: Thinking up new ways of analyzing the data (measures, columns)
 - :construction: Make the dashboard pretty (good taste? may need tutorial for that)
 - :construction: Add shadows to visuals
@@ -40,7 +42,7 @@ Based on the information from the [original dataset source repository](https://w
 2. **SKU-Level Detail:** Unique product identifiers (ID) with varying demand patterns.
 3. **Warehouse and Region:** Spatial dimensions representing distribution networks.
 4. **Units Sold:** Number of units sold in a day (simulated with seasonal trends and random noise).
-5. **Inventory Levels:** Dynamic on-hand stock that evolves over time.
+5. **Inventory Levels:** Dynamic on-hand stock (at the end of the day) that evolves over time. Inventory level of an SKU in a warehouse changes based on the number of units sold and  e.g. if inventory level for a day is 592, units sold for the next day is 17, and no amount of the SKU was delivered to the warehouse, then inventory level for the next day is 575 (=592-17).
 6. **Supplier Lead Times:** Variable delivery delays for replenishment orders.
 7. **Reorder Points and Quantities:** Inventory policy thresholds and simulated replenishments.
 8. **Promotions:** Binary indicator of promotional periods influencing demand.
@@ -48,3 +50,12 @@ Based on the information from the [original dataset source repository](https://w
 10. **Supplier Information:** Links products to specific suppliers with unique lead times.
 11. **Cost and Price:** Realistic unit costs and selling prices with profit margins.
 12. **Forecasted Demand:** Approximate prediction values reflecting planning estimates.
+
+Here are interpretations of columns created as a result of analyzing the data:
+
+13. **Beginning Inventory Level:** The number of units (of a specific SKU) at the beginning of the day (in a specific warehouse).
+
+Here are some implicit assumptions:
+
+1. "Sold-to-region"="Ship-to-region" --- I assume that "Region" means the region from which orders are made and where the orders are delivered; regions are associated with sales (units sold).
+2. Suppliers in this dataset are those who deliver SKUs to warehouses, not SKUs to customers.
